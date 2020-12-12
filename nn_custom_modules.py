@@ -19,9 +19,6 @@ class Polynomial3(torch.nn.Module):
     def string(self):
         return f'y = {self.a.item()} + {self.b.item()} x + {self.c.item()} x^2 + {self.d.item()} x^3'
 
-    def result(self):
-        return
-
     def plot(self):
         pred_vals, actual_vals = [], []
         input = np.arange(-math.pi, math.pi, math.pi / 20)
