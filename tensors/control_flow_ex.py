@@ -4,7 +4,7 @@ import random
 import torch
 import math
 import numpy as np
-import  matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 class DynamicNet(torch.nn.Module):
 
@@ -29,7 +29,8 @@ class DynamicNet(torch.nn.Module):
         pred_vals, actual_vals = [], []
         input = np.arange(-math.pi, math.pi, math.pi / 20)
         for x in input:
-            pred = (self.a.item() + (self.b.item() * x ** 1) + (self.c.item() * x ** 2) + (self.d.item() * x ** 3)
+            pred = (self.a.item() + (self.b.item() * x ** 1)
+                    + (self.c.item() * x ** 2) + (self.d.item() * x ** 3)
                     + (self.e.item() * x ** 4) + (self.e.item() * x ** 5))
             actual = math.sin(x)
 
@@ -64,3 +65,4 @@ for t in range(30000):
     optimizer.step()
 
 print(f'Result: {model.string()}')
+model.plot()
