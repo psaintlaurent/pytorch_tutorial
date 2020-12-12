@@ -39,3 +39,4 @@ for t in range(2000):
 linear_layer = model[0]
 
 print(f'Result: y = {linear_layer.bias.item()} + {linear_layer.weight[:,0].item()} x + {linear_layer.weight[:, 1].item()} x^2 + {linear_layer.weight[:, 2].item()} + x^3')
+
