@@ -12,7 +12,6 @@ class Polynomial3(torch.nn.Module):
         self.c = torch.nn.Parameter(torch.randn(()))
         self.d = torch.nn.Parameter(torch.randn(()))
 
-
     def forward(self, x):
         return self.a + self.b * x + self.c * x **2 + self.d * x ** 3
 
