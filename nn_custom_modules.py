@@ -58,4 +58,4 @@ for t in range(2000):
     optimizer.step() #iterate one through the parameter optimization function
 
 print(f'Result: {model.string()}')
-
+model.plot()
